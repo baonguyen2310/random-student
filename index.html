@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chọn sinh viên ngẫu nhiên</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #result {
+            margin-top: 30px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            min-height: 40px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 14px;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Chọn sinh viên ngẫu nhiên</h1>
+        <button onclick="chonHocSinh()">Chọn sinh viên</button>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        const hocSinh = [
+            "Dương Thị Lan Anh",
+            "Nguyễn Thành Bắc",
+            "Nguyễn Chí Bảo",
+            "Dương Cao Cờ",
+            "Bùi Bá Đạt",
+            "Tạ Phát Đạt",
+            "Nguyễn A Đỉnh",
+            "Lâm Nhựt Huỳnh",
+            "Nguyễn Trần Ngọc Hỷ",
+            "Bùi Minh Khánh",
+            "Ngô Võ Quốc Khánh",
+            "Nguyễn Thành Khoa",
+            "Dương Minh Khôi",
+            "Trần Vĩnh Phúc",
+            "Nguyễn Hồ Vĩnh Phước",
+            "Nguyễn Huỳnh Hải Phương",
+            "Nguyễn Thị Kim Quyến",
+            "Đoàn Văn Sơn",
+            "Nguyễn Thị Thu Thảo",
+            "Lê Phan Minh Thư",
+            "Lê Nguyễn Ngọc Trâm",
+            "Nguyễn Quốc Vỹ",
+            "Nguyễn Thị Yến"
+        ];
+
+        function chonHocSinh() {
+            const randomIndex = Math.floor(Math.random() * hocSinh.length);
+            document.getElementById('result').textContent = hocSinh[randomIndex];
+        }
+    </script>
+
+</body>
+</html>
